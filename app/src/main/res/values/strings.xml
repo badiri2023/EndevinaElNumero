@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">EndevinaElNumero</string>
+    <string name="app_name">Adivina el Numero</string>
+    <string name="hint_numero">Escribe un Numero</string>
+    <string name="btn_intentar">Intentar</string>
+    <string name="txt_intentos">Intentos: 0</string>
+    <string name="tv_mensaje">Introduce un número entre 1 y 100</string>
 </resources>

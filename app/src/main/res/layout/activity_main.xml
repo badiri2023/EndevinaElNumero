@@ -8,12 +8,75 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/textView"
+        android:layout_width="217dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="120dp"
+        android:text="@string/tv_mensaje"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNumero"
+        android:layout_width="351dp"
+        android:layout_height="62dp"
+        android:autofillHints="none"
+        android:hint="@string/hint_numero"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <Button
+        android:id="@+id/btnIntentar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:hint="@string/btn_intentar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNumero" />
+
+    <TextView
+        android:id="@+id/tvIntentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/txt_intentos"
+        app:layout_constraintTop_toBottomOf="@id/btnIntentar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.076"/>
+
+    <ScrollView
+        android:id="@+id/scrollViewHistorial"
+        android:layout_width="353dp"
+        android:layout_height="232dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIntentos">
+
+        <TextView
+            android:id="@+id/tvHistorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Historial de intentos:\n"
+            android:textSize="14sp" />
+    </ScrollView>
+    <Button
+        android:id="@+id/btnRanking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:hint="Hall OF Fame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollViewHistorial" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
